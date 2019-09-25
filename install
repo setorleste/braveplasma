@@ -1,0 +1,38 @@
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+source /etc/os-release
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
+sudo apt update && sudo apt install brave-keyring brave-browser -y
+
+sudo apt update
+sudo apt install snapd
+sudo snap install libreoffice
+sudo apt install exfat-fuse exfat-utils
+
+sudo add-apt-repository ppa:noobslab/apps
+
+sudo add-apt-repository ppa:clipgrab-team/ppa
+sudo apt-get update
+sudo apt-get install clipgrab
+
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
+
+sudo snap install audio-recorder --beta
+sudo snap install telegram-desktop
+
+wget -O google-earth64.deb http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+sudo dpkg -i google-earth64.deb
+sudo apt-get -f install; rm google-earth64.deb
+sudo apt-get install msttcorefonts
+
+sudo apt-get update
+sudo apt-get install pianobooster
+
+sudo apt-get update
+sudo apt install r-base
+https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
+sudo apt install gdebi
+sudo gdebi rstudio-xenial-1.1.463-amd64.deb
