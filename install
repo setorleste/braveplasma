@@ -36,3 +36,13 @@ sudo apt install r-base
 https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.1335-amd64.deb
 sudo apt install gdebi
 sudo gdebi rstudio-xenial-1.1.463-amd64.deb
+
+echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+sudo apt-get update
+sudo apt-get install balena-etcher-electron
+
+sudo add-apt-repository ppa:nemh/systemback
+sudo apt update
+sudo apt install systemback
+
