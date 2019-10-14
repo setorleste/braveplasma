@@ -46,3 +46,10 @@ sudo add-apt-repository ppa:nemh/systemback
 sudo apt update
 sudo apt install systemback
 
+wget -O urserver.deb http://http.unifiedremote.com/d/linux-x64-deb
+linux-x86-deb
+sudo dpkg -i urserver.deb
+/opt/urserver/
+~/.urserver/
+./opt/urserver/urserver-start
+./opt/urserver/urserver-stop
